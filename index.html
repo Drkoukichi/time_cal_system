@@ -19,29 +19,40 @@
     <div class="head">
         <h1>時間計算ツール</h1>
     </div>
-    <div class="input">
+    <form class="input">
         <div class="in_time">
-        <p>勤務開始時間を入力してください ※初期設定9:00</p>
-        <input type="text" name="t_in_time_h" value="9" size="8" maxlength="2">
-        : <input type="text" name="t_in_time_m" value="00" size="8" maxlength="2">
-    </div>
+            <p>勤務開始時間を入力してください ※初期設定9:00</p>
+            <input type="text" name="in_time_h" value="9" size="2" maxlength="2">
+            : <input type="text" name="in_time_m" value="00" size="2" maxlength="2">
+        </div>
         <div class="s_rest_time">
-        <p>休憩開始時間を入力してください ※入力必須</p>
-            <input type="text" name="t_in_time_h" value="入力" size="8" maxlength="2">
-        : <input type="text" name="t_in_time_m" value="必須" size="8" maxlength="2">
+            <p>休憩開始時間を入力してください ※入力必須</p>
+            <input type="text" name="s_rest_time_h" value="" size="2" maxlength="2" required>
+            : <input type="text" name="s_rest_time_m" value="" size="2" maxlength="2" required>
         </div>
         <div class="e_rest_time">
-        <p>休憩終了時間を入力してください ※初期設定 13:15</p>
-            <input type="text" name="t_in_time_h" value="1" size="8" maxlength="2">
-            : <input type="text" name="t_in_time_m" value="15" size="8" maxlength="2">
+            <p>休憩終了時間を入力してください ※初期設定 13:15</p>
+            <input type="text" name="e_rest_time_h" value="13" size="2" maxlength="2">
+            : <input type="text" name="e_rest_time_m" value="15" size="2" maxlength="2">
         </div>
         <div class="out_time">
-        <p>勤務終了時間を入力してください ※初期設定 17:30</p>
-            <input type="text" name="t_in_time_h" value="17" size="8" maxlength="2">
-            : <input type="text" name="t_in_time_m" value="30" size="8" maxlength="2">
+            <p>勤務終了時間を入力してください ※初期設定 17:30</p>
+            <input type="text" name="out_time_h" value="17" size="2" maxlength="2">
+            : <input type="text" name="out_time_m" value="30" size="2" maxlength="2">
+        </div>
+        <br>
+        <dev class="btn">
+            <p><input type="button" value="計算" onclick="onclick(in_time_h,in_time_m,s_rest_time_h,s_rest_time_m,e_rest_time_h,e_rest_time_m,out_time_h,out_time_m);"></p>
+        </dev>
+    </form>
+
+    <div class="output">
+        <div class="f_in_time_h">
+            <p>勤務開始時間</p>
+            <input type="text" name="f_in_time_h" value="" size="2" maxlength="2" readonly>
+            : <input type="text" name="f_in_time_m" value="" size="2" maxlength="2" readonly>
         </div>
     </div>
-
-    </body>
+</body>
 
 </html>
